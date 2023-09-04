@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For/While_LotteryNumbers</title>
+</head>
+
+<body> 
+    <div class="tables1"></div>
+    <div class="tables2"></div>
+</body>
+
+<script>
+    //for loop
+    const loop = 6;
+    display = document.querySelector(".tables1");
+    let random = "";
+    NumberStr = "";
+    for (let index =1; index <= loop; index++){
+        let random = Math.floor(Math.random() * 49 )+ 1;
+        NumberStr += random + " ";
+        console.log(NumberStr);
+    }
+    
+    display.innerHTML = NumberStr ; 
+
+    //while loop
+    display2 = document.querySelector("tables2");
+    a=0;
+    WhileStr = " ";
+    Str = " ";
+    while(a<6){
+        Str = Math.floor(Math.random() * 49) + 1;
+        a++;
+        WhileStr += Str + " ";
+        console.log(WhileStr);
+    }
+
+    display2.innerHTML = WhileStr ;
+
+</script>
+
+</html>
